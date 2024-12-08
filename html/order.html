@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовлення</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Створення замовлення</h1>
+    </header>
+    <form id="order-form">
+        <!-- Суші -->
+        <section class="order-section">
+            <h2>Суші</h2>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="150" value="Філадельфія"> Філадельфія - 150 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="180" value="Червоний дракон"> Червоний дракон - 180 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="160" value="Каліфорнія"> Каліфорнія - 160 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="140" value="Текка"> Текка - 140 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="200" value="Зелений дракон"> Зелений дракон - 200 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="170" value="Унагі рол"> Унагі рол - 170 грн</label>
+            </div>
+        </section>
+
+        <!-- Піца -->
+        <section class="order-section">
+            <h2>Піца</h2>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="130" value="Пепероні"> Пепероні - 130 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="150" value="Гавайська"> Гавайська - 150 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="160" value="Цезар"> Цезар - 160 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="170" value="Чотири сири"> Чотири сири - 170 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="120" value="Маргарита"> Маргарита - 120 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="180" value="М'ясна"> М'ясна - 180 грн</label>
+            </div>
+        </section>
+
+        <!-- Бургери -->
+        <section class="order-section">
+            <h2>Бургери</h2>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="85" value="Гамбургер"> Гамбургер - 85 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="110" value="Чізбургер"> Чізбургер - 90 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="120" value="Дабл-бургер"> Дабл-бургер - 120 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="100" value="Курячий бургер"> Курячий бургер - 100 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="130" value="Веганський бургер"> Веганський бургер - 110 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="115" value="Бекон-бургер"> Бекон-бургер - 115 грн</label>
+            </div>
+        </section>
+
+        <!-- Хот-доги -->
+        <section class="order-section">
+            <h2>Хот-доги</h2>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="70" value="Одинарний хот-дог"> Одинарний - 70 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="100" value="Подвійний хот-дог"> Подвійний - 100 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="90" value="Сирний Хот-дог"> Сирний - 90 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="95" value="Шаурма"> Шаурма - 95 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="85" value="Французький Хот-дог"> французький - 85 грн</label>
+            </div>
+            <div class="dish">
+                <label><input type="checkbox" class="dish-checkbox" data-price="100" value="бекон хот-дог"> бекон хот-дог - 100 грн</label>
+            </div>
+        </section>
+
+        <!-- Варіант доставки -->
+        <section class="order-section">
+            <h2>Варіант доставки</h2>
+            <div>
+                <label><input type="radio" name="delivery" value="self-pickup" data-price="0" checked> Самовивіз (0 грн)</label>
+            </div>
+            <div>
+                <label><input type="radio" name="delivery" value="delivery" data-price="40"> Доставка (40 грн)</label>
+            </div>
+        </section>
+        <button type="button" id="calculate-button">Розрахувати замовлення</button>
+    </form>
+
+    <!-- Виведення підсумку -->
+    <div id="order-summary" class="order-summary"></div>
+
+    <nav>
+        <button onclick="location.href='../index.html'">На головну</button>
+        <button onclick="location.href='menu.html'">Меню</button>
+    </nav>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
